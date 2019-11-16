@@ -82,7 +82,7 @@ def plot(datapoints):
         print(x, altrhs)  # where the comparison is printed out
         yerrlist.append((1 / 2) * err / cs)
         if T==0:
-            rhslist[0]=1#the integral fails when T=0 as you are dividing by zero in the function so this is a quick fix
+            rhslist[0]=1#the integral fails when T=0 as you are dividing by zero in the function
     print(lhslist)
     print(yerrlist)
 
@@ -237,7 +237,7 @@ def electrontempplot3d(length, Tstart, Tend, Tpoints, limstart, limend):
     plt.title("Temperature Integral")
     plt.xlabel("V limit on integral (units of c_s)")
     plt.ylabel("Electron Temperature (eV)")
-    ax.set_zlim(0, Tend)  # for some reason 2eV wasnt showing up on the z axis#check this if doing weird temps
+    ax.set_zlim(0, Tend)
     plt.show()
     # plt.figure(3)   #2D plot of electron temp varying the v limit on integral#doesnt work for nested for loops
     # plt.plot(vmax / cs, electrontemplist)
